@@ -1,0 +1,12 @@
+<ul>
+  <% @posts.each do |post| %>
+  <li>
+    <%= post.title %> by <%= post.user_id %>
+    <ul>
+      <li>
+        <%= post.body%>
+      </li>
+    </ul>
+  </li>
+  <% end %>
+</ul>
