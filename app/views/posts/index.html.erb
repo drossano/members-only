@@ -3,7 +3,7 @@
   <li>
     <%= post.title %> by <%= 
     if user_signed_in?
-    post.user.email
+    post.user.username
     else
     post.user_id  
     end
