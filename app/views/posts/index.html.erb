@@ -1,7 +1,13 @@
 <ul>
   <% @posts.each do |post| %>
   <li>
-    <%= post.title %> by <%= post.user_id %>
+    <%= post.title %> by <%= 
+    if user_signed_in?
+    post.user.email
+    else
+    post.user_id  
+    end
+     %>
     <ul>
       <li>
         <%= post.body%>
